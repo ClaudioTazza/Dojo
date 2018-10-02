@@ -14,10 +14,10 @@ else:
   f.close()
 
 f = open("sum.dat", 'w')
-# Apre in scrittura 
+# Apre in scrittura oppure crea
 
 newNum = int( input('Inserire il numero da sommare: ') )
-f.write(num + newNum)
+f.write(str(num + newNum))
 # Chiede un numero e lo somma a quello gia' presente
 
 f.close()
