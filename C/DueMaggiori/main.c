@@ -1,26 +1,31 @@
 #include <stdio.h>
 
 int main(){
-  int numero, maggiore = 0, maggiore2 = 0, i = 1, temp;
+  int numero, maggiore = 0, maggiore2 = 0, i = 0, temp;
 
   printf("Inserisci 10 numeri, trovero' per te i 2 numeri piu' grandi\n");
 
-  printf("%d: ", i);
+  printf("%d: ", i + 1);
   scanf("%d", &maggiore); /* Poniamo che il primo numero sia il piu' grande*/
+  i++;
 
+  printf("%d: ", i + 1);
+  scanf("%d", &maggiore2);
+  i++;
 
+  if(maggiore2 > maggiore){
+    temp = maggiore;
+    maggiore = maggiore2;
+    maggiore2 = maggiore;
+  }  
+  
   while(i < 10){
     printf("%d: ", i+1);
     scanf("%d", &numero);
 
-    if(numero > maggiore2){
-      maggiore2 = numero;
-    
-      if(maggiore2 > maggiore){
-        temp = maggiore2;
-        maggiore2 = maggiore;
-        maggiore = temp;
-      }
+    if(numero >=  maggiore){
+      maggiore2 = maggiore;
+      maggiore = numero; 
     }    
 
     i += 1;
