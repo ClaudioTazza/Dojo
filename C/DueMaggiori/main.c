@@ -23,14 +23,15 @@ int main(){
     printf("%d: ", i+1);
     scanf("%d", &numero);
 
-    if(numero >=  maggiore){
-      maggiore2 = maggiore;
-      maggiore = numero; 
+    if(numero >  maggiore2){
+      if(numero > maggiore){ 
+        maggiore2 = maggiore;
+        maggiore = numero;
+      } 
+      else maggiore2 = numero;
     }    
-
     i += 1;
-  }/*Confrontiamo il primo con il secondo e troviamo il maggiore. Continua fino al decimo*/
-
+  }
   printf("Il maggiore e' %d\n", maggiore);
   printf("Il secondo maggiore e' %d\n", maggiore2);
 
