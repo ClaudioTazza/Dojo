@@ -9,9 +9,11 @@ int main(){
     printf("%d: ", i+1);
     scanf("%d", &numeri[i]);
 
-    if(i == 0)
-      maggiore = numeri[i];
-    else if(numeri[i] > maggiore)
+    if( !(i == 0) ){
+      if(numeri[i] > maggiore)
+        maggiore = numeri[i];
+    }
+    else 
       maggiore = numeri[i];
 
     i += 1;
