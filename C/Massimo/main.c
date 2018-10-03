@@ -1,23 +1,24 @@
 #include <stdio.h>
 
 int main(){
-  int numero, maggiore = 0, i = 0;
+  int numero, maggiore = 0, i = 1;
 
   printf("Inserisci 10 numeri, trovero' per te quello piu' grande\n");
+
+  printf("%d: ", i);
+  scanf("%d", &maggiore); /* Poniamo che il primo numero sia il piu' grande*/
+
 
   while(i < 10){
     printf("%d: ", i+1);
     scanf("%d", &numero);
 
-    if( !(i == 0) ){
-      if(numero > maggiore)
-        maggiore = numero;
-    }
-    else 
+    if(numero > maggiore){
       maggiore = numero;
+    }
 
     i += 1;
-  }/*Esegue il ciclo 10 volte*/
+  }/*Confrontiamo il primo con il secondo e troviamo il maggiore. Continua fino al decimo*/
 
   printf("Il maggiore e' %d\n", maggiore);
 
