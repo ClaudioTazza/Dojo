@@ -11,7 +11,7 @@ int main(){
   A = p * r * r;
   C = 2*p * r; 
 
-  printf("La circonferenza e' : %lf\nLa superfice e'     : %lf\n", C, A);
+  printf("La circonferenza e' : %f\nLa superfice e'     : %f\n", C, A);
           
   return 0;
 }
