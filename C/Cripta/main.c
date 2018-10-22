@@ -10,20 +10,15 @@ int main(){
 
   original = n;
 
-  while(n > 0){
-    crit += (((n % 10) + 7) % 10) * pow(10, i) ;
-    n /= 10;
-    i++;
-  }
-
-  c4 = crit%10;
-  crit /= 10;
-  c3 = crit%10;
-  crit /= 10; 
-  c2 = crit%10;
-  crit /= 10;
-  c1 = crit%10;
-  crit /= 10;
+  
+  c4 = ((n%10) + 7) %10; /*Modifica la quarta cifra*/
+  n /= 10;
+  c3 = ((n%10) + 7) %10; /*Modifica la terza cifra*/
+  n /= 10;
+  c2 = ((n%10) + 7) %10; /*Modifica la terza cifra*/
+  n /= 10;
+  c1 = ((n%10) + 7) %10; /*Modifica la terza cifra*/
+  n /= 10;
 
   crit = c3*1000 + c4*100 + c1*10 + c2;
 
