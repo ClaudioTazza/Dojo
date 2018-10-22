@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 int main(){
   int n, crit = 0, original;
@@ -9,7 +8,6 @@ int main(){
   scanf("%d", &n);
 
   original = n;
-
   
   c4 = ((n%10) + 7) %10; /*Modifica la quarta cifra*/
   n /= 10;
