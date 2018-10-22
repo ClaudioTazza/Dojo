@@ -2,7 +2,7 @@
 #include <math.h>
 
 int main(){
-  int n, crit = 0, original, i = 0;
+  int n, crit = 0, original;
   int c1, c2, c3, c4; 
 
   printf("Inserisci un numero di quattro cifre: ");
