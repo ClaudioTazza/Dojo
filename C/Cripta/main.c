@@ -4,9 +4,11 @@ int main(){
   int n, crit = 0, original;
   int c1, c2, c3, c4; 
 
-  printf("Inserisci un numero di quattro cifre: ");
-  scanf("%d", &n);
-
+  do{
+    printf("Inserisci un numero di quattro cifre: ");
+    scanf("%d", &n);
+  }while(n < 1000 || n > 9999);
+  
   original = n;
   
   c4 = ((n%10) + 7) %10; /*Modifica la quarta cifra*/
