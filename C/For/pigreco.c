@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 int main(){
-  int i, n, divisore = 3;
+  int i, n, divisore = 3, segno=-1;
   double pi=4;
   
   printf("Approssimazione di Pi Greco\n"
@@ -13,13 +13,11 @@ int main(){
     scanf("%d", &n);
   }while(n < 1);
 
-  for(i=0; i < n; i++){
-      pi -= 4./divisore;
-      divisore += 2;
+  for(i=0; i < n; i++){ 
+    pi += (4./divisore) * segno;
+    divisore += 2;
 
-      pi += 4./divisore;
-      divisore += 2;
-
+    segno *= -1;
   }  
 
   printf("PI: %f\n", pi);
