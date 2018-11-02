@@ -6,9 +6,12 @@ print ("Approssimazione di Pi Greco\n"
 n = int(input("Quanti termini vuoi utilizzare? "))
 pi = 0.
 segno = 1
+divisore = 1
 
-for i in range(1, n*2, 2):
- pi += (4./i) * segno 
+for i in range(n):
+ pi += (4./divisore) * segno 
+
+ divisore += 2
  segno *= -1
 
 print("PI: ", pi)
