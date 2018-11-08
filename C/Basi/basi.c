@@ -13,11 +13,11 @@ int main(){
   
     temp_i = i;
 
-    for(i2 = 0; i2 < 8; i2++){
+    for(i2 = 7; i2 >= 0; i2--){
       bin[i2] = temp_i % 2;
       temp_i /= 2;
      }/* Inserisce il valore binario nel vettore */
-     for(i2 = 7; i2 >= 0; i2--){ 
+     for(i2 = 0; i2 < 8; i2++){ 
        printf("%d", bin[i2]);
      }/* Stampa il numero binario */
 
