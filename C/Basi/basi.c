@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <math.h>
 
 int main(){
   int i, i2, temp_i;
-  int bin[8] , ott[3];
 
   printf("N\t  Bin\t  Oct\t  Hex\n");
 
@@ -12,28 +10,15 @@ int main(){
     printf("%d\t", i);            /* Stampa il numero della riga*/
   
     temp_i = i;
-
-    for(i2 = 7; i2 >= 0; i2--){
-      bin[i2] = temp_i % 2;
-      temp_i /= 2;
-     }/* Inserisce il valore binario nel vettore */
-
-    temp_i = i;
-
-     for(i2 = 2; i2 >= 0; i2--){
-       ott[i2] = temp_i % 8;
-       temp_i /= 8;
-     }
-
-     for(i2 = 0; i2 < 8; i2++){ 
-       printf("%d", bin[i2]);
-     }/* Stampa il numero binario */
-
-     printf("   ");
-
-     for(i2 = 0; i2 < 3; i2++){ 
-       printf("%d", ott[i2]);
-     }/* Stampa il numero ottale */
+    
+    for(i2 = 128; i2 > 0 ; i2/= 2){
+      if(temp_i - i2 > -1){
+        putchar('1');
+        temp_i -= i2;
+      } 
+      else
+        putchar('0');
+    }/* Calcola e stampa il valore binario della riga*/
 
     printf("\n");
   }
