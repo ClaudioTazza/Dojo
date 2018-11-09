@@ -2,7 +2,7 @@
 
 int main(){
   int i, i2, temp_i;
-  int ott3bit, ott2bit;
+  int ott3bit , ott2bit;
 
   printf("N\t  Bin\t  Oct\t  Hex\n");
 
@@ -30,13 +30,13 @@ int main(){
     ott3bit = 0;
     ott2bit = 0;
 
-    while(temp_i - 64 > -1){
+    while(temp_i - 64 >= 0){
       ott3bit += 1;
       temp_i -= 64;
     }
     printf("%d", ott3bit);
 
-    while(temp_i - 8 > -1){
+    while(temp_i - 8 >= 0){
       ott2bit += 1;
       temp_i -= 8;
     }
