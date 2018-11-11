@@ -9,29 +9,29 @@ int main(){
   for(i=0; i < 10; i++){
     printf("%d\t", i);            /* Stampa il numero della riga*/
   
-    backup_i= i;
+    backup_i = i;
    
     /* Inizio Stampa binario */
     for(w = 128; w > 0 ; w/= 2){
-      printf("%d", backup_i/w);
-      backup_i %= w;
+      printf("%d", i/w);
+      i %= w;
     }
     /* Fine stampa binario */
   
     printf("   ");
-    backup_i = i;
-    
+    i = backup_i;
+
     /* Inizio stampa ottale */
 
     for(w = 64; w > 0; w /= 8){
-      printf("%d", backup_i/w);
-      backup_i %= w;
+      printf("%d", i/w);
+      i %= w;
     } 
 
     /* Fine stampa ottale */ 
    
     printf("   ");
-    backup_i = i;
+    i = backup_i;
 
     /* Inizio stampa esadecimale */
     /* Fine stampa esadecimale */
