@@ -23,9 +23,9 @@ int main(){
     /* Fine stampa binario */
   
     printf("   ");
-
-    /* Inizio stampa ottale */
     backup_i = i;
+    
+    /* Inizio stampa ottale */
 
     for(i2 = 64; i2 > 0; i2 /= 8){
       printf("%d", backup_i/i2);
@@ -33,6 +33,12 @@ int main(){
     } 
 
     /* Fine stampa ottale */ 
+   
+    printf("   ");
+    backup_i = i;
+
+    /* Inizio stampa esadecimale */
+    /* Fine stampa esadecimale */
 
     printf("\n");
   }
