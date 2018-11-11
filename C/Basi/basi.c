@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(){
-  int i, i2, backup_i;
+  int i, w, backup_i;
 
   printf("N\t  Bin\t  Oct\t  Hex\n");
 
@@ -12,10 +12,10 @@ int main(){
     backup_i= i;
    
     /* Inizio Stampa binario */
-    for(i2 = 128; i2 > 0 ; i2/= 2){
-      if(backup_i - i2 > -1){
+    for(w = 128; w > 0 ; w/= 2){
+      if(backup_i - w > -1){
         putchar('1');
-        backup_i -= i2;
+        backup_i -= w;
       } 
       else
         putchar('0');
@@ -27,9 +27,9 @@ int main(){
     
     /* Inizio stampa ottale */
 
-    for(i2 = 64; i2 > 0; i2 /= 8){
-      printf("%d", backup_i/i2);
-      backup_i %= i2;
+    for(w = 64; w > 0; w /= 8){
+      printf("%d", backup_i/w);
+      backup_i %= w;
     } 
 
     /* Fine stampa ottale */ 
