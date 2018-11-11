@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main(){
-  int i, i2, temp_i;
-  int ott3bit , ott2bit;
+  int i, i2, backup_i;
 
   printf("N\t  Bin\t  Oct\t  Hex\n");
 
@@ -10,13 +9,13 @@ int main(){
   for(i=0; i < 10; i++){
     printf("%d\t", i);            /* Stampa il numero della riga*/
   
-    temp_i = i;
+    backup_i= i;
    
     /* Inizio Stampa binario */
     for(i2 = 128; i2 > 0 ; i2/= 2){
-      if(temp_i - i2 > -1){
+      if(backup_i - i2 > -1){
         putchar('1');
-        temp_i -= i2;
+        backup_i -= i2;
       } 
       else
         putchar('0');
@@ -26,22 +25,13 @@ int main(){
     printf("   ");
 
     /* Inizio stampa ottale */
-    temp_i = i;
-    ott3bit = 0;
-    ott2bit = 0;
+    backup_i = i;
 
-    while(temp_i - 64 >= 0){
-      ott3bit += 1;
-      temp_i -= 64;
-    }
-    printf("%d", ott3bit);
+    for(i2 = 64; i2 > 0; i2 /= 8){
+      printf("%d", backup_i/i2);
+      backup_i %= i2;
+    } 
 
-    while(temp_i - 8 >= 0){
-      ott2bit += 1;
-      temp_i -= 8;
-    }
-    printf("%d", ott2bit);
-    printf("%d", temp_i);
     /* Fine stampa ottale */ 
 
     printf("\n");
