@@ -13,12 +13,8 @@ int main(){
    
     /* Inizio Stampa binario */
     for(w = 128; w > 0 ; w/= 2){
-      if(backup_i - w > -1){
-        putchar('1');
-        backup_i -= w;
-      } 
-      else
-        putchar('0');
+      printf("%d", backup_i/w);
+      backup_i %= w;
     }
     /* Fine stampa binario */
   
