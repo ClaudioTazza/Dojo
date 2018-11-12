@@ -25,7 +25,7 @@ int main(){
         
   }
 
-  printf("Le volali presenti nel file sono %d\n\n", conta);
+  printf("Le vocali presenti nel file sono %d\n\n", conta);
 
   return 0;
 }
