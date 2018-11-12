@@ -4,8 +4,15 @@ int main(){
   int conta, c;
 
   while((c = getchar()) != EOF){
-    if(c == ' ')
-      conta++;
+    switch(c){ 
+      case '\n':
+      case '\t':
+      case ' ':
+        conta++;
+        break;
+      default:
+        ;
+    }
   }
 
   printf("Il numero di spazi e' di %d\n\n", conta);
