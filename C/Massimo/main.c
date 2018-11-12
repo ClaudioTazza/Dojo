@@ -18,7 +18,8 @@ int main(){
     }
 
     i += 1;
-  }/*Confrontiamo il primo con il secondo e troviamo il maggiore. Continua fino al decimo*/
+  }/*Confrontiamo il primo con il secondo e troviamo il maggiore. 
+     Continua fino al decimo*/
 
   printf("Il maggiore e' %d\n", maggiore);
 

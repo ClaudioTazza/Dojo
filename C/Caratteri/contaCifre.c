@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main(){
-  char c;
-  int conta = 0;
+  int c, conta = 0;
 
   while((c = getchar()) != EOF){
     switch(c){
