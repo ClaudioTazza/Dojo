@@ -1,29 +1,43 @@
 #include <stdio.h>
 
 int main(){
-  int c, spazi = 0, altri = 0;
-  int numeri[10] = {0};
+  int c, spazi = 0, altri = 0, i;
+  int numeri[10];
+
+  /* Inizializzo il vettore */
+  for(i = 0; i < 10; i++){
+    numeri[i] = 0;
+  }
 
   while((c = getchar()) != EOF){
     switch(c){
       case '1':
         numeri[1]++;
+        break;
       case '2':
         numeri[2]++;
+        break;
       case '3':
         numeri[3]++;
+        break;
       case '4':
         numeri[4]++;
+        break;
       case '5': 
         numeri[5]++;
+        break;
       case '6':
         numeri[6]++;
+        break;
       case '7':
         numeri[7]++;
+        break;
       case '8':
         numeri[8]++;
+        break;
       case '9':
         numeri[9]++;
+        break;
       case '0':
         numeri[0]++;
         break;
