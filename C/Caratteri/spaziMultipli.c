@@ -26,3 +26,14 @@ int main(){
 
   return 0;
 }
+
+
+/* Tabella di stati
+ *  Stato      Input        Output      Nuovo Stato
+ * --------------------------------------------------
+ *  NORM       c != ' '       c             -
+ *  NORM       c  = ' '      ' '          SPAZIO
+ *
+ *  SPAZIO     c != ' '       c           NORM 
+ *  SPAZIO     c  = ' '       -             -               
+ */
