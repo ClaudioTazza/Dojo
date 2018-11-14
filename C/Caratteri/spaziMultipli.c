@@ -11,8 +11,8 @@ int main(){
       if(c != ' ')
         putchar(c);
       else{
-        stato = SPAZIO;
         putchar(' ');
+        stato = SPAZIO;
       }
     }
     

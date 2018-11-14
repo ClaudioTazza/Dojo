@@ -11,37 +11,19 @@ int main(){
 
   while((c = getchar()) != EOF){
     switch(c){
-      case '1':
-        numeri[1]++;
+      case 1: 
+      case 2: 
+      case 3: 
+      case 4: 
+      case 5: 
+      case 6: 
+      case 7: 
+      case 8: 
+      case 9:
+      case 0:
+        numeri[c]++;
         break;
-      case '2':
-        numeri[2]++;
-        break;
-      case '3':
-        numeri[3]++;
-        break;
-      case '4':
-        numeri[4]++;
-        break;
-      case '5': 
-        numeri[5]++;
-        break;
-      case '6':
-        numeri[6]++;
-        break;
-      case '7':
-        numeri[7]++;
-        break;
-      case '8':
-        numeri[8]++;
-        break;
-      case '9':
-        numeri[9]++;
-        break;
-      case '0':
-        numeri[0]++;
-        break;
-
+     
       case ' ':
         spazi++;
         break;
