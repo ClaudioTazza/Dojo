@@ -2,7 +2,7 @@
 
 /* Stato        Input           Output         Next
  * +++++++++++++++++++++++++++++++++++++++++++++++++++++++
- * NORM    c > 32 && c < 127       -           PAROLA
+ * NORM    c > 32 && c < 127       c           PAROLA
  * NORM         else               -             =
  *
  * PAROLA  c > 32 && c < 127       c             =
@@ -20,10 +20,11 @@ int main(){
     if(STATO == NORM){
       if(c > 32 && c < 127){
         STATO = PAROLA;
+        putchar(c);
       } 
     } 
 
-    if(STATO == PAROLA){
+    else if(STATO == PAROLA){
       if( c > 32 && c < 127 )
         putchar(c);
        

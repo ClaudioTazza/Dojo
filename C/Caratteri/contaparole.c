@@ -23,7 +23,7 @@ int main(){
         STATO = PAROLA;
     } 
 
-    if(STATO == PAROLA){
+    else if(STATO == PAROLA){
       if( !(c > 32 && c < 127) ){
         STATO = NORM;
         contaPar++;
