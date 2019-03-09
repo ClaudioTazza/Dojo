@@ -16,8 +16,9 @@ x = (low + high) / 2
 segno = 0
 conta = 0 
 
-while 1:
+while low < high:
     value = (x**3 + 4.5*x**2 + 3.5*x - 3)
+    conta += 1
 
     if value < 0:
         segno = -1
@@ -32,7 +33,6 @@ while 1:
       high = x   
 
     x = (low + high) / 2
-    conta += 1
     segno = 0
 
 print "Soluzione = ", x
