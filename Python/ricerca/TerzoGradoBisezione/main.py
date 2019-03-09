@@ -6,7 +6,7 @@ print "Terzo Grado\n\n"
 
 print "Data l'equazione x^3 + 4.5 x^2 + 3.5 x - 3 = 0\n\n"
 
-print "Trova la soluzione compresa nell'intervallo (", low, ",", high
+print "Trova la soluzione compresa nell'intervallo (", low, ",", high, ")"
 print "mediate metodo di bisezione\n\n"
 
 print "Intervallo di ricerca: (", low, ",", high, ")\n"
