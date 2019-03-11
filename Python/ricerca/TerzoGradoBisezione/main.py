@@ -22,8 +22,7 @@ while low < high:
 
     if abs(gval) < soglia:
         break
-    
-    elif (gval < 0 and lval > 0) or (gval > 0 and lval < 0):
+    elif gval * lval < 0: 
         high = g
     else:
         low = g
