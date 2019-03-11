@@ -12,28 +12,22 @@ print "mediate metodo di bisezione\n\n"
 print "Intervallo di ricerca: (", low, ",", high, ")\n"
 print "Valore soglia per lo zero:", soglia, "\n\n"
 
-x = (low + high) / 2
-segno = 0
+g = (low + high) / 2
 conta = 0 
 
 while low < high:
-    value = (x**3 + 4.5*x**2 + 3.5*x - 3)
+    gval = (g**3 + 4.5*g**2 + 3.5*g - 3)
+    lval = (low**3 + 4.5*low**2 + 3.5*low - 3)
     conta += 1
 
-    if value < 0:
-        segno = -1
-        value *= -1
-
-    if value < soglia:
+    if gval < soglia:
         break
-
-    if segno == -1:
-      low = x  
+    elif (gval < 0 and lval > 0) or (gval > 0 and lval < 0):
+        high = g
     else:
-      high = x   
+        low = g
 
-    x = (low + high) / 2
-    segno = 0
+    g = (low + high) / 2
 
-print "Soluzione = ", x
+print "Soluzione = ", g
 print "Passaggi = ", conta
