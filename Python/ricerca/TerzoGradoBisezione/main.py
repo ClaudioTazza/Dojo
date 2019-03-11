@@ -12,7 +12,7 @@ print "mediate metodo di bisezione\n\n"
 print "Intervallo di ricerca: (", low, ",", high, ")\n"
 print "Valore soglia per lo zero:", soglia, "\n\n"
 
-g = (low + high) / 2
+g = (low + high) // 2
 conta = 0 
 
 while low < high:
@@ -27,7 +27,7 @@ while low < high:
     else:
         low = g
 
-    g = (low + high) / 2
+    g = (low + high) // 2
 
 print "Soluzione = ", g
 print "Passaggi = ", conta
