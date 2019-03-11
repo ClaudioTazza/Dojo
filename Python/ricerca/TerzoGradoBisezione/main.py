@@ -1,5 +1,3 @@
-import numpy as np
-
 low = 0.3
 high = 0.75
 soglia = 0.00001
@@ -22,9 +20,10 @@ while low < high:
     lval = (low**3 + 4.5*low**2 + 3.5*low - 3)
     conta += 1
 
-    if gval < 0:
+    if abs(gval) < soglia:
         break
-    elif np.sign(gval) != np.sign(lval):
+    
+    elif (gval < 0 and lval > 0) or (gval > 0 and lval < 0):
         high = g
     else:
         low = g
