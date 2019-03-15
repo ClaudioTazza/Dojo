@@ -23,7 +23,7 @@ a{
 
 li{
 				color: #900;
-				margine inferiore pari a due volte la dimensione standard dei caratteri;
+				margin-bottom: 2em;
 }
 
 p{
