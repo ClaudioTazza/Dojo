@@ -1,0 +1,39 @@
+<link href="https://fonts.googleapis.com/css?family=Cookie|Roboto" rel="stylesheet">
+
+body{
+				font-size: 14px;
+				color: #ffc;
+				font-family: Sans-Serif;
+				font-style: normal;
+}
+
+h1{
+				color: teal;
+				text-align: center;
+				line-height: 7em;
+}
+
+h2{
+				color:lime;
+}
+
+a{
+				text-decoration-line: none;
+}
+
+li{
+				color: #900;
+				margine inferiore pari a due volte la dimensione standard dei caratteri;
+}
+
+p{
+				color:navy;
+				letter-spacing: 10px;
+				text-indent: 3em;
+}
+
+h1, h2{
+    font-family: Cookie;
+}
+
+font-family: 'Roboto', sans-serif;
