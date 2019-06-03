@@ -1,39 +1,38 @@
-<link href="https://fonts.googleapis.com/css?family=Cookie|Roboto" rel="stylesheet">
-
 body{
-				font-size: 14px;
-				color: #ffc;
-				font-family: Sans-Serif;
-				font-style: normal;
+  font-size: 14px;
+  color: #ffc;
+  font-family: Sans-Serif;
+  font-style: normal;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1{
-				color: teal;
-				text-align: center;
-				line-height: 7em;
+  color: teal;
+  text-align: center;
+  line-height: 7em;
 }
 
 h2{
-				color:lime;
+  color:lime;
 }
 
 a{
-				text-decoration-line: none;
+  text-decoration-line: none;
 }
 
 li{
-				color: #900;
-				margin-bottom: 2em;
+  color: #900;
+  margin-bottom: 2em;
 }
 
 p{
-				color:navy;
-				letter-spacing: 10px;
-				text-indent: 3em;
+  color:navy;
+  letter-spacing: 10px;
+  text-indent: 3em;
 }
 
 h1, h2{
-    font-family: Cookie;
+  font-family: Cookie;
 }
 
-font-family: 'Roboto', sans-serif;
+
