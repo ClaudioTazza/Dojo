@@ -41,7 +41,7 @@ void converti(int num, int base){
       if(digit < 9)
         printf("%d", digit);
       else
-	printf("%c", digit + '7'); /* E' questo che intendeva? */
+	printf("%c", (digit - 10) + 'A'); 
     }
     else
       printf("0");
