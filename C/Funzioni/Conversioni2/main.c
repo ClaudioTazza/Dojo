@@ -30,8 +30,9 @@ void converti(int num, int base){
   while(n < 255){
     n *= base;
   }
+  n /= base;
   
-  for(int bitVal = n/base; bitVal >= 1; bitVal/=base){
+  for(int bitVal = n; bitVal >= 1; bitVal/=base){
 
     if(num >= bitVal){
       digit = num/bitVal;
@@ -40,7 +41,7 @@ void converti(int num, int base){
       if(digit < 9)
         printf("%d", digit);
       else
-	printf("%c", digit + 55);
+	printf("%c", digit + '7'); /* E' questo che intendeva? */
     }
     else
       printf("0");
