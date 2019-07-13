@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 void converti(int num, int base);
 
@@ -18,20 +19,17 @@ int main(){
 }
 
 void converti(int num, int base){
-
-  int n = base;
+  int n = 0;
   int digit = 0;
 
   if(base < 2 || base > 36){
     puts("Base non appropriata");
     return;
   }
-  
-  while(n < 255){
-    n *= base;
-  }
-  n /= base;
-  
+
+  n = log(255.)/log(base);
+  n = pow(base, n);
+
   for(int bitVal = n; bitVal >= 1; bitVal/=base){
 
     if(num >= bitVal){
@@ -41,10 +39,10 @@ void converti(int num, int base){
       if(digit < 9)
         printf("%d", digit);
       else
-	printf("%c", (digit - 10) + 'A'); 
+	printf("%c", (digit - 10) + 'A');
     }
     else
       printf("0");
   }
-  
+
 }
