@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "coin.h"
+#include "random.h"
+
+void coin_simulation(int flips){
+  int heads = 0, tails = 0, flip = 0;
+
+  random_init();
+
+  for(int i = 0; i < flips; i++){
+    flip = random_between(0, 2);
+    if(flip == 0)
+      heads++;
+    else
+      tails++;
+  }
+
+  printf("Numero lanci: %d\nTeste: %d\nCroci: %d\n", flips, heads, tails);
+}
