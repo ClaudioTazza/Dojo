@@ -15,5 +15,5 @@ void coin_simulation(int flips){
       tails++;
   }
 
-  printf("Numero lanci: %d\nTeste: %d\nCroci: %d\n", flips, heads, tails);
+  printf("Flips: %d\nHeads: %d\nTails: %d\n", flips, heads, tails);
 }
