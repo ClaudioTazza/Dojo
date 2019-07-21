@@ -2,6 +2,15 @@
 #include "coin.h"
 #include "random.h"
 
+void coin_init(){
+  random_init();
+}
+
+int coin_flip(){
+  return random_between(0, 2);
+}
+
+/*
 void coin_simulation(int flips){
   int heads = 0, tails = 0, flip = 0;
 
@@ -16,4 +25,4 @@ void coin_simulation(int flips){
   }
 
   printf("Flips: %d\nHeads: %d\nTails: %d\n", flips, heads, tails);
-}
+}*/
