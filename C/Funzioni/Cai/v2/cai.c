@@ -1,12 +1,16 @@
 #include "cai.h"
 #include "random.h"
 
+static int errorCount = 0;
+static int rightCount = 0;
+
 void cai_init(){
   random_init();
 }
 
 void cai_sbagliato(){
   int num = random_between(0, 4);
+  errorCount++;
 
   switch(num){
     case 0:
@@ -22,10 +26,12 @@ void cai_sbagliato(){
       puts("No. Keep trying.");
       break;
   }
+
 }
 
 void cai_giusto(){
   int num = random_between(0, 4);
+  rightCount++;
 
   switch(num){
     case 0:
@@ -45,4 +51,10 @@ void cai_giusto(){
 
 int cai_estrai_num(){
   return random_between(1, 10);
+}
+
+void cai_statistics(){
+  int perRispEsatte = (rightCount / (errorCount + rightCount)) * 100;
+  if(perRispEsatte < 75)
+    printf("Please ask your instructor for extra help\n");
 }

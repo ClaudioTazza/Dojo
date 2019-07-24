@@ -7,5 +7,5 @@ int cai_estrai_num();
 
 void cai_giusto();
 void cai_sbagliato();
-
+void cai_statistics();
 #endif
