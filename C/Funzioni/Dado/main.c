@@ -5,30 +5,13 @@ void printStars(int num);
 
 int main(){
   int num[6] = { 0 };
+  int roll_val = 0;
 
   dado_init();
 
   for(int i = 0; i < 100; i++){
-    switch( dado_roll() ){
-      case 1:
-        num[0]++;
-        break;
-      case 2:
-        num[1]++;
-        break;
-      case 3:
-        num[2]++;
-        break;
-      case 4:
-        num[3]++;
-        break;
-      case 5:
-        num[4]++;
-        break;
-      case 6:
-        num[5]++;
-        break;
-    }
+    roll_val = dado_roll();
+    num[roll_val - 1]++;
   }
 
   for(int i = 0; i < 6; i++){
@@ -43,5 +26,5 @@ int main(){
 
 void printStars(int num){
   for(int i = 0; i < num; i++)
-    printf("*");
+    putchar('*');
 }
