@@ -1,4 +1,5 @@
 #include "random.h"
+#include <stdio.h>
 #include <time.h>
 
 void random_init(){
