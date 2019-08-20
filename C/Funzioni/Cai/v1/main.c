@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include "cai.h"
 
-
 int main(){
   int num1 = 0, num2 = 0, answer = 0, correct_an;
 
-  cai_init;
+  cai_init();
 
   while(1){
     num1 = cai_estrai_num();

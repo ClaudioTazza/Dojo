@@ -1,6 +1,6 @@
 #include "cai.h"
 #include "random.h"
-
+#include <stdio.h>
 
 void cai_init(){
   random_init();

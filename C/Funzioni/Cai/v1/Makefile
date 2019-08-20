@@ -10,6 +10,10 @@ cai.o: cai.c cai.h random.h
 
 random.o: random.h random.c
 
-.PHONY: clean
+.PHONY: clean recom
+
+recom:
+	make clean; make
+
 clean:
 	rm -rf *.o main
