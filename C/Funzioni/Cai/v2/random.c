@@ -1,6 +1,7 @@
 #include "random.h"
-#include <stdio.h>
 #include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 void random_init(){
   srand(time(NULL));
@@ -17,5 +18,5 @@ int random_between(int min, int max){
   if(diff == 0)
     return min;
 
-  return min + (random() % diff) ;
+  return min + (rand() % diff) ;
 }

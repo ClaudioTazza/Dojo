@@ -8,7 +8,7 @@ int main(){
 
   int contaErrori = 0;
 
-  cai_init;
+  cai_init();
 
   while(1){
     num1 = cai_estrai_num();
@@ -25,7 +25,7 @@ int main(){
         contaErrori++;
 
       if (count == 10)
-        if( (contaErrori / count) * 100 >= 75)
+        if( ((float)contaErrori / count) * 100 >= 75)
           puts("Please ask your instructor for extra help.");
 
     }while(answer != correct_an);
