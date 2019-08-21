@@ -25,7 +25,7 @@ int main(){
         contaErrori++;
 
       if (count == 10)
-        if( ((float)contaErrori / count) * 100 >= 75)
+        if( ((double)contaErrori / (double)count) * 100. >= 75.)
           puts("Please ask your instructor for extra help.");
 
     }while(answer != correct_an);
