@@ -4,6 +4,7 @@
 int main(){
   int rispostaEsatta = 0;
   int tentativo = 0;
+  double temp = 'n';
   double again = 'n';
 
   guess_init();
@@ -31,13 +32,26 @@ int main(){
         break;
       }
     }
+   
+    /* Pulizia buffer*/
+    while( (temp=getchar()) != '\n')
+      ;
+
 
     /* Vuoi giocare ancora? */
-    puts("Would you like to play again (y or n)?");
     do{
+      puts("Would you like to play again (y or n)?");
       again = getchar();
+
+      if(again != 'n' && again != 'y' && again != '\n'){
+        /* Pulizia buffer */
+        while((temp=getchar()) != '/n')
+	  ;
+      }
+
     }while(again != 'n' && again != 'y');
 
   }while(again == 'y');
-    return 0;
+
+  return 0;
 }
