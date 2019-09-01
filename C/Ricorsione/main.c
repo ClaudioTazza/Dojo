@@ -5,7 +5,7 @@ int fibonacci(int n);
 int main(){
 
   for(int i = 0; i < 10; i++) {
-    printf("%d  ", fibonacci(i));
+    printf("%d  ", fibonacci(i+1));
   }
 
   putchar('\n');
@@ -14,10 +14,10 @@ int main(){
 }
 
 int fibonacci(int n){
-  else if(n <= 1)
+  if(n == 1)
     return 0; 
 
-  else if(n == 1)
+  else if(n == 2)
     return 1;
 
   else
