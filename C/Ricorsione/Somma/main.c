@@ -15,9 +15,8 @@ int somma(int n1, int n2){
     return -1;
   }
 
-  if(n1 > 0)
-    return 1 + somma(n1-1, n2);
-  else 
+  if(n1 == 0)
     return n2; 
-
-}
+  else 
+    return 1 + somma(n1-1, n2);
+  }
