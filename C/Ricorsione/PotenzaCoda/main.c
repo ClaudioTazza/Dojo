@@ -14,7 +14,7 @@ int potenza_helper(int n1, int n2, int ris){
     return ris;
   else{
     ris *= n1;
-    potenza_helper(n1, n2-1, ris);
+    return potenza_helper(n1, n2-1, ris);
   } 
 }
 
