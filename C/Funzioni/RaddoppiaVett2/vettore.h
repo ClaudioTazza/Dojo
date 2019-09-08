@@ -4,6 +4,5 @@
 void stampa(int[], int);
 void raddoppia(int[], int);
 void initVet(int[], int);
-void raddoppiaInt(int *n);
 
 #endif
