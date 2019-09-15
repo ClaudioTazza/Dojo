@@ -2,13 +2,10 @@
 #include "fibonacci.h"
 
 int main(){
-  int n = 0;
+  for(int i = 0; i < 10; i++)
+    printf("%d ", fibonacci(i) );
 
-  puts("Imaggino tu voglia vedere i primi...");
-  scanf("%d", &n);
-  puts("Numeri :)");
-
-  fibonacci(n);
+  putchar('\n');
 
   return 0;
 }

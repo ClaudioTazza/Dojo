@@ -1,28 +1,25 @@
 #include <stdio.h>
 #include "fibonacci.h"
 
-int fibonacci_helper(int n, int cache[]){
+void fibonacci_helper(int n, int cache[]);
+
+void fibonacci_helper(int n, int cache[]){
   if(n==0 || n==1){
     cache[n] = n;
-    return n;
   }
   else{
-    return cache[n-1] + cache[n-2];
+    cache[n] = cache[n-1] + cache[n-2];
   }
 }
 
-void fibonacci(int n){
-  int vett[n];
+int fibonacci(int n){
 
-  for(int i=0; i < n; i++)
-    vett[i] = 0;
+  int vett[50] = { 0 };
 
-  for(int i=0; i < n; i++){
-    vett[i] = fibonacci_helper(i, vett);
-    printf("%d ", vett[i]);
-  }
+  for(int i = 0; i < n + 1; i++)
+    fibonacci_helper(i, vett);
 
-  putchar('\n');
+  return vett[n];
 }
 
 
