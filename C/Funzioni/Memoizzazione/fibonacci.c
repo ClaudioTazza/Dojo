@@ -10,7 +10,7 @@ void fibonacci_helper(int n, int cache[]){
   else{
     if(cache[n-1] == 0)
       fibonacci_helper(n-1, cache);
-
+      
     cache[n] = cache[n-1] + cache[n-2];
   }
 }
@@ -24,7 +24,8 @@ int fibonacci(int n){
     return -1;
   }
 
-  fibonacci_helper(n, vett);
+  if(n > 1 && vett[n-1] == 0)
+    fibonacci_helper(n, vett);
 
   return vett[n-1];
 }
