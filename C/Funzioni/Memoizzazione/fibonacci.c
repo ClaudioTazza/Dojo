@@ -15,11 +15,16 @@ void fibonacci_helper(int n, int cache[]){
 int fibonacci(int n){
 
   int vett[50] = { 0 };
+ 
+  if(n > 50){
+    printf("Numero superiore alla soglia massima");
+    return -1;
+  }
 
-  for(int i = 0; i < n + 1; i++)
+  for(int i = 0; i < n; i++)
     fibonacci_helper(i, vett);
 
-  return vett[n];
+  return vett[n-1];
 }
 
 
