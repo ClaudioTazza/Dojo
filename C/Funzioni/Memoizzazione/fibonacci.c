@@ -15,9 +15,10 @@ void fibonacci_helper(int n, int cache[]){
 int fibonacci(int n){
 
   int vett[50] = { 0 };
- 
-  if(n > 50){
-    printf("Numero superiore alla soglia massima");
+
+   
+  if(n > 50 || n < 1){
+    printf("Numero non valido");
     return -1;
   }
 
